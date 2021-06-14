@@ -1,25 +1,13 @@
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit
-          <code>
-            src/App.js
-          </code>
-          and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+import BooksList from './BooksList';
+import BooksForm from './BooksForm';
+
+const App = () => (
+  <>
+    <div>
+      <BooksList />
+      <BooksForm />
     </div>
-  );
-}
+  </>
+);
 
 export default App;
