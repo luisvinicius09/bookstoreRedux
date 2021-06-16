@@ -4,12 +4,9 @@ import './index.css';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import App from './components/App';
+import books from './reducers/index';
 
-const reducer = () => ({
-  test: 'wroking',
-});
-
-const store = createStore(reducer);
+const store = createStore(books);
 
 ReactDOM.render(
   <React.StrictMode>

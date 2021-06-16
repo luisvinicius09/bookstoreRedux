@@ -1,7 +1,7 @@
 import { CREATE_BOOK, REMOVE_BOOK } from '../actions/index';
 
 const bookStore = (state = [], action) => {
-  switch(action.type) {
+  switch (action.type) {
     case CREATE_BOOK:
       return [
         ...state,
