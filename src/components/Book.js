@@ -1,17 +1,15 @@
 import PropTypes from 'prop-types';
 
-const Book = ({ bookId, title, category }) => (
+const Book = ({ book }) => (
   <tr>
-    <td>{bookId}</td>
-    <td>{title}</td>
-    <td>{category}</td>
+    <td>{book.id}</td>
+    <td>{book.title}</td>
+    <td>{book.category}</td>
   </tr>
 );
 
 Book.propTypes = {
-  bookId: PropTypes.number.isRequired,
-  title: PropTypes.string.isRequired,
-  category: PropTypes.string.isRequired,
+  book: PropTypes.instanceOf(Object).isRequired,
 };
 
 export default Book;
