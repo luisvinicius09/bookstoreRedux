@@ -28,7 +28,7 @@ class BooksForm extends React.Component {
 
   handleChange(e) {
     if (e.target.name === 'title') {
-      this.setState({ title: e.target.value })
+      this.setState({ title: e.target.value });
     } else if (e.target.name === 'category') {
       this.setState({ category: e.target.value });
     }
