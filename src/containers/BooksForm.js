@@ -30,7 +30,7 @@ class BooksForm extends React.Component {
     if (e.target.name === 'title') {
       this.setState({ title: e.target.value });
     } else if (e.target.name === 'category') {
-      this.setState({ category: e.target.value })
+      this.setState({ category: e.target.value });
     }
   }
 
