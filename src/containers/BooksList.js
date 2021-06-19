@@ -35,7 +35,7 @@ class BooksList extends React.Component {
               <Book
                 key={book.id}
                 book={book}
-                handleRemoveBook={this.handleRemoveBook()}
+                handleRemoveBook={() => this.handleRemoveBook(book)}
               />
             ))}
           </tbody>
