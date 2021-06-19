@@ -62,8 +62,8 @@ class BooksForm extends React.Component {
         </label>
         <label htmlFor="category">
           Category
-          <select onChange={this.handleChange} value={category}>
-            {categories.map((c) => <option key={c} name={c}>{c}</option>)}
+          <select name="category" onChange={this.handleChange} value={category}>
+            { categories.map((c) => <option key={c} value={c}>{c}</option>) }
           </select>
         </label>
         <label htmlFor="submit">
