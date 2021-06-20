@@ -68,10 +68,7 @@ class BooksForm extends React.Component {
               { categories.map((c) => <option key={c} value={c}>{c}</option>) }
             </select>
           </label>
-          <label htmlFor="submit">
-            Submit
-            <input type="submit" className="submit" />
-          </label>
+          <input type="submit" className="submit" />
         </form>
       </div>
     );
