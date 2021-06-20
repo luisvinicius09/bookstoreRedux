@@ -311,7 +311,114 @@ code {
   }
 }
 
+@media only screen and (max-width: 900px) {
+  .title {
+    display: flex;
+    flex-direction: column;
 
+    .books {
+      display: none;
+    }
 
+    .categories {
+      align-self: flex-start;
+    }
+  }
 
+  .book-container {
+    .left-center {
+      flex-direction: column;
+      flex-basis: 70% !important;
+      border-right: 1px solid #ddd;
 
+      #center {
+        justify-content: flex-start !important;
+        padding-top: 16px;
+        border: none !important;
+      }
+    }
+
+    #right {
+      padding-left: 10%;
+    }
+  }
+
+  .main-form {
+    input {
+      flex-basis: 36% !important;
+      margin-right: 20px !important;
+    }
+
+    select {
+      flex-basis: 26% !important;
+      margin-right: 20px !important;
+    }
+
+    button {
+      flex-basis: 33% !important;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .book-container {
+    flex-direction: column;
+  }
+
+  .left-center {
+    flex-direction: row !important;
+    width: 100%;
+    border: none !important;
+    border-bottom: 1px solid #ddd !important;
+    padding-bottom: 17px;
+  }
+
+  #right {
+    padding: 17px 0 0 !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: flex-start;
+  }
+
+  .main-form {
+    flex-direction: column;
+
+    input,
+    select {
+      margin: 0 0 17px !important;
+      padding: 10px;
+    }
+
+    button {
+      padding: 15px !important;
+    }
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  #root {
+    padding: 0;
+  }
+
+  header {
+    flex-flow: column-reverse !important;
+    padding: 20px 0 30px !important;
+
+    .categories {
+      align-self: center !important;
+    }
+
+    .imgHeader {
+      margin: 20px auto 0;
+    }
+  }
+
+  .book-section {
+    padding: 1em !important;
+
+    .left-center {
+      flex-direction: column !important;
+    }
+  }
+}
