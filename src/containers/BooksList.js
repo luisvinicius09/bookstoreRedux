@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import Book from '../components/Book';
 import { removeBook, changeFilter } from '../actions/index';
 import CategoryFilter from '../components/CategoryFilter';
+import logo from '../assets/logo.svg';
 
 class BooksList extends React.Component {
   constructor(props) {
@@ -31,12 +32,20 @@ class BooksList extends React.Component {
     const filteredBooks = (filter !== 'All') ? books.filter((book) => book.category === filter) : books;
     return (
       <div className="book-container">
-        <div className="title">
-          <h1>BookStore JS</h1>
-          <div className="categories">
-            <CategoryFilter handleChange={this.handleFilterChange} />
+        <header>
+          <div className="title">
+            <h1>
+              BookStore JS
+              <span className="books">Books</span>
+            </h1>
+            <div className="categories">
+              <CategoryFilter handleChange={this.handleFilterChange} />
+            </div>
           </div>
-        </div>
+          <div className="imgHeader">
+            <img className="logo" src={logo} alt="logo" />
+          </div>
+        </header>
 
         <div className="main">
           <div className="book-section">
