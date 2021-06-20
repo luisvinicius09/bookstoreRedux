@@ -31,19 +31,15 @@ class BooksList extends React.Component {
     const filteredBooks = (filter !== 'All') ? books.filter((book) => book.category === filter) : books;
     return (
       <div className="book-container">
-        <div>
-          <CategoryFilter handleChange={this.handleFilterChange} />
+        <div className="title">
+          <h1>BookStore JS</h1>
+          <div className="categories">
+            <CategoryFilter handleChange={this.handleFilterChange} />
+          </div>
         </div>
-        <table>
-          <thead>
-            <tr>
-              <th>Book ID</th>
-              <th>Title</th>
-              <th>Category</th>
-              <th>Remove Book</th>
-            </tr>
-          </thead>
-          <tbody>
+
+        <div className="main">
+          <div className="book-section">
             {filteredBooks.map((book) => (
               <Book
                 key={book.id}
@@ -51,8 +47,8 @@ class BooksList extends React.Component {
                 handleRemoveBook={() => this.handleRemoveBook(book)}
               />
             ))}
-          </tbody>
-        </table>
+          </div>
+        </div>
       </div>
     );
   }
