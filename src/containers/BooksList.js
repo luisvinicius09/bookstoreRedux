@@ -9,9 +9,7 @@ import logo from '../assets/logo.svg';
 class BooksList extends React.Component {
   constructor(props) {
     super(props);
-
     this.handleRemoveBook = this.handleRemoveBook.bind(this);
-    this.handleFilterChange = this.handleFilterChange.bind(this);
   }
 
   handleRemoveBook(book) {
@@ -19,12 +17,6 @@ class BooksList extends React.Component {
     const s = this.props;
     const bookIndex = (s.books).findIndex((x) => x === book);
     removeBook(bookIndex);
-  }
-
-  handleFilterChange(event) {
-    const filter = event.target.value;
-    const { changeFilter } = this.props;
-    changeFilter(filter);
   }
 
   render() {
@@ -63,25 +55,17 @@ class BooksList extends React.Component {
   }
 }
 
-const mapStateToProps = (state) => ({
-  books: state.books,
-  filter: state.filter,
+const mapStateToProps = (s) => ({
+  books: s.books,
 });
 
 const mapDispatchToProps = (dispatch) => ({
   removeBook: (book) => dispatch(removeBook(book)),
-  changeFilter: (book) => dispatch(changeFilter(book)),
 });
-
-BooksList.defaultProps = {
-  filter: 'All',
-};
 
 BooksList.propTypes = {
   books: PropTypes.instanceOf(Object).isRequired,
-  filter: PropTypes.string,
   removeBook: PropTypes.instanceOf(Function).isRequired,
-  changeFilter: PropTypes.func.isRequired,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(BooksList);
