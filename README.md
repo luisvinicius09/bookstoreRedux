@@ -1,3 +1,4 @@
+
 <p align="center">
   <img src="https://img.shields.io/badge/Microverse-blueviolet">
 </p>
@@ -11,7 +12,7 @@
 </h4>
 
 <p align="center">
-  <img src="./app_screenshot.png">
+  <img src="https://user-images.githubusercontent.com/60414217/122692774-50fb8200-d20d-11eb-8829-ad976eb6bd27.png">
 </p>
   
 Additional description about the project and its features.
