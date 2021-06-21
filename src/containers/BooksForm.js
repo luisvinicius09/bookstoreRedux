@@ -51,7 +51,6 @@ class BooksForm extends React.Component {
       category: categories[0],
     });
   }
-
   render() {
     const { title, category } = this.state;
     return (
