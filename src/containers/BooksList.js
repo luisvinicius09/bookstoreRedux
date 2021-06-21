@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Book from '../components/Book';
-import { removeBook, changeFilter } from '../actions/index';
-import CategoryFilter from '../components/CategoryFilter';
+import { removeBook, changeFilter } from '../actions/index'; // eslint-disable-line
+import CategoryFilter from '../components/CategoryFilter'; // eslint-disable-line
 import logo from '../assets/logo.svg';
 
 class BooksList extends React.Component {
